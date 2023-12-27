@@ -1,0 +1,11 @@
+.contenido{
+    padding-bottom: 81px; 
+}
+.texto{
+    margin-bottom: spacer * .15;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-style: null;
+    font-weight: 500;
+    line-height: 1.5;
+    color: inherit;
+}
