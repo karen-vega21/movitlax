@@ -1,27 +1,33 @@
-<ul class="nav justify-content-end">
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link active" routerLink="/inicio" aria-current="page" href="#" style="color: #5b476e;">Inicio</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/rutas" aria-current="page" href="#" style="color: white;">Rutas</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/descarga" aria-current="page" style="color: white;">Descarga</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/ayuda" aria-current="page" style="color: white;">Ayuda</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="page" style="color: white;">
-              Inicio sesión
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" routerLink="/login">Iniciar sesión</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" routerLink="/signup">Registrarse</a></li>
-            </ul>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid" style="background-color: #5b476e;">
+      <a class="navbar-brand" routerLink="/inicio">Movitlax</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/inicio" style="color: white;">Inicio</a>
           </li>
-    </ul>
-</ul>
-
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/rutas" style="color: white;">Rutas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/descarga" style="color: white;">Descarga</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/ayuda" style="color: white;">Ayuda</a>
+          </li>
+          <li *ngIf="!userLoginOn" class="nav-item" >
+            <a class="nav-link" routerLink="/login" style="color: white;">Inicio sesión</a>
+          </li>
+          <li *ngIf="userLoginOn" class="nav-item" >
+            <a class="nav-link" routerLink="/dashboard" style="color: white;">Perfil</a>
+          </li>
+          <li *ngIf="userLoginOn" class="nav-item" >
+            <a class="nav-link" routerLink="/inicio" style="color: white;">Cerrar sesión</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

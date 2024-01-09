@@ -1,4 +1,8 @@
-.nav{
+.navbar{
     background-color: #5b476e;
-    
+}
+
+.container-fluid{
+    align-content: center;
+    text-align: right;
 }

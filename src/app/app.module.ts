@@ -17,15 +17,22 @@ import {MatIconModule} from '@angular/material/icon';
 
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
+
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 import { NavComponent } from './nav/nav.component';
+
 import { RutasComponent } from './pages/rutas/rutas.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatButtonModule} from '@angular/material/button';
+
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { DescargaComponent } from './pages/descarga/descarga.component';
 import { AyudaComponent } from './pages/ayuda/ayuda.component';
 import { SignupComponent } from './signup/signup.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -53,9 +60,16 @@ import { SignupComponent } from './signup/signup.component';
     MatMenuModule,
     MatIconModule,
     MatGridListModule,
-    RouterModule
+    RouterModule,
+    MatSidenavModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
+
